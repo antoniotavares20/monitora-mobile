@@ -6,9 +6,12 @@ branches:
  - master
 before_script:
  - npm install -g ionic cordova
+ - npm install -g @angular/cli
 
 script:
- - ionic cordova build browser -- prod
+  - ionic cordova build browser - prod
+  - ng build --prod --aot
+
 deploy:
  provider: pages
  skip-cleanup: true
