@@ -6,9 +6,9 @@ branches:
  - master
 before_script:
  - npm install -g ionic cordova
- - cordova platform add browser
+
 script:
- - ionic cordova build browser - prod
+ - ionic cordova build browser -- prod
 deploy:
  provider: pages
  skip-cleanup: true
