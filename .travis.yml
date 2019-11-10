@@ -10,8 +10,7 @@ before_script:
  - npm install -g @angular/cli
  
 script:
-  - ionic build browser --prod
-  - ng build --prod --aot
+  - ionic cordova build browser --prod 
 
 deploy:
  provider: pages
