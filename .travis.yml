@@ -22,8 +22,7 @@ script:
   - ng test --watch false -cc
   - npm run e2e
   - ng build -bh "https://antoniotavares20.github.io/monitora-mobile/"
-  - ionic cordova build browser --prod
-
+ 
 
 deploy:
  provider: pages
