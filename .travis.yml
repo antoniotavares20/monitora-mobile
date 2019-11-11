@@ -21,9 +21,8 @@ before_script:
 script:
   - ng test --watch false -cc
   - npm run e2e
-  - ng build --prod --bh https://antoniotavares20.github.io/monitora-mobile/
+  - ng build -bh 'https://antoniotavares20.github.io/monitora-mobile/'
  
-
 deploy:
  provider: pages
  skip-cleanup: true
