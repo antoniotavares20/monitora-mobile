@@ -6,8 +6,8 @@ branches:
  - master
 before_script:
  - npm install -g ionic 
- - npm install -g cordova@latest
- - npm install -g @angular/cli
+ - npm install -g cordova
+ 
  
 script:
   - ionic cordova build browser --prod
