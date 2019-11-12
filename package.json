@@ -2,7 +2,7 @@
   "name": "monitora-ufg-view",
   "version": "0.0.1",
   "author": "Ionic Framework",
-  "scripts": {
+  "scripts": { 
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
