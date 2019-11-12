@@ -21,7 +21,7 @@ before_script:
 script:
   - npm run e2e
   - ng build --base-href 'https://antoniotavares20.github.io/monitora-mobile/'
-  
+
 deploy:
  provider: pages
  skip-cleanup: true

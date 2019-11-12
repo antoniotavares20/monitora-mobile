@@ -2,18 +2,14 @@
   "name": "monitora-ufg-view",
   "version": "0.0.1",
   "author": "Ionic Framework",
-  "scripts": { 
+  "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "test": "ng test",
     "lint": "ng lint",
-    "gh-pages": "ng build --base-href 'https://antoniotavares20.github.io/Monitora-UFG' --prod && npx ngh --dir=www/",
-    "test": "ng test --config ./config/karma.conf.js",
-    "test-ci": "ng test --config ./config/karma.conf.js --watch=false --code-coverage",
-    "test-coverage": "ng test --config ./config/karma.conf.js --code-coverage",
-    "e2e": "npm run e2e-update && npm run e2e-test",
-    "e2e-test": "protractor ./config/protractor.conf.js",
-    "e2e-update": "webdriver-manager update --standalone false --gecko false"
+    "e2e": "ng e2e",
+    "gh-pages": "ng build --base-href 'https://antoniotavares20.github.io/Monitora-UFG' --prod && npx ngh --dir=www/"
   },
   "private": true,
   "dependencies": {
