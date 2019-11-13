@@ -1,33 +1,33 @@
 language: node_js
 node_js:
- - '10.16.0'
-
-sudo: true
-dist: trusty 
+  - "12.11.0"
 
 branches:
- only:
- - master
+  only:
+    - master
 
 before_script:
- - export CHROME_BIN=/usr/bin/google-chrome
- - export DISPLAY=:99.0
- - sh -e /etc/init.d/xvfb start
- - sudo apt-get update
- - sudo apt-get install -y libappindicator1 fonts-liberation
- - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
- - sudo dpkg -i google-chrome*.deb
- 
+  - npm install -g ionic cordova
+  - ionic cordova platform add browser
+
+addons:
+  chrome: stable
+
 script:
-  - ng test --watch false -cc
+  - npm run lint
+  - npm run test
   - npm run e2e
-  - ng build --base-href 'https://antoniotavares20.github.io/monitora-mobile/'
+  - ionic build --prod
+
+before_deploy:
+  - npm install -g replace
+  - replace 'href="/"' 'href="/'$GITHUB_PAGE_SUBDIRECTORY'"' www/index.html
 
 deploy:
- provider: pages
- skip-cleanup: true
- github-token: $GITHUB_TOKEN 
- keep-history: true
- on:
-   branch: master
- local_dir: www
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: master
+  local_dir: www
