@@ -21,7 +21,7 @@ script:
 
 before_deploy:
   - npm install -g replace
-  - replace 'href="/"' 'href="/'$GITHUB_PAGE_SUBDIRECTORY'"' www/index.html
+  - replace 'href="/"' 'href="/'https://antoniotavares20.github.io/monitora-mobile/'"' www/index.html
 
 deploy:
   provider: pages
