@@ -4,15 +4,12 @@
   "author": "Ionic Framework",
   "main": "protractor.conf.js",
   "scripts": {
-     "test": "protractor",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "gh-pages": "ng build --base-href 'https://antoniotavares20.github.io/Monitora-UFG' --prod && npx ngh --dir=www/"
-  },
+    "e2e": "ng e2e"
+    },
   "private": true,
   "dependencies": {
     "protractor": "5.1.1",    
