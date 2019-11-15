@@ -8,9 +8,9 @@
         ]
     },
     "files": [
-        "src/test.ts",
-        "src/zone-flags.ts",
-        "src/polyfills.ts"
+        "test.ts",
+        "zone-flags.ts",
+        "polyfills.ts"
     ],
     "include": [
         "src/**/*.spec.ts",
