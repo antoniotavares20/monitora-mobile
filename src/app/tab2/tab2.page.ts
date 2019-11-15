@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, AlertController } from '@ionic/angular';
-
-import * as dayjs from '@angular/dayjs';
+import { dayjs } from 'daysjs';
 
 import { NotificacaoFormComponent } from '../shared/notificacao/components/notificacao-form/notificacao-form.component';
 import { MockupService } from 'src/app/services/mockup.service';
