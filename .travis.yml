@@ -20,7 +20,7 @@ before_script:
 # - sudo dpkg -i google-chrome*.deb
  
 script:
-- ionic cordova build browser - prod
+- ionic cordova build browser --prod
  # - ng test --watch false -cc
  # - npm run e2e
  # - ng build --base-href 'https://antoniotavares20.github.io/monitora-mobile/'
