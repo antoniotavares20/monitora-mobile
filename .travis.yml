@@ -1,4 +1,6 @@
 language: node_js
+stage: deploy
+
 node_js:
  - '10.16.0'
 
@@ -20,10 +22,22 @@ before_script:
 # - sudo dpkg -i google-chrome*.deb
  
 script:
-- ionic cordova build browser --prod
+-  ionic build --prod -- --base-href='https://antoniotavares20.github.io/monitora-mobile/'
+- npx angular-cli-ghpages --dir=www
+
+#- ionic cordova build browser --prod  --release
  # - ng test --watch false -cc
  # - npm run e2e
  # - ng build --base-href 'https://antoniotavares20.github.io/monitora-mobile/'
+#- rm -rf public
+#- mkdir public
+#- cp -r www/* public
+artifacts:
+expire_in: 1 week
+paths:
+ - public
+only:
+  - dev
 
 deploy:
  provider: pages
@@ -32,4 +46,5 @@ deploy:
  keep-history: true
  on:
    branch: master
- local_dir: www
+ local_dir: dir
+
