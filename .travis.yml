@@ -25,7 +25,7 @@ before_script:
 
 script:
 -  ionic build --prod -- --base-href='https://antoniotavares20.github.io/monitora-mobile/'
-- firebase deploy --only hosting,functions --token $FIREBASE_TOKEN2
+- firebase deploy --only hosting,functions --token $FIREBASE_TOKEN
 #- ionic cordova build browser --prod  --release
  # - ng test --watch false -cc
  # - npm run e2e
